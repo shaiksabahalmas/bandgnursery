@@ -1,0 +1,28 @@
+{
+  "name": "kindle-kids-frontend",
+  "version": "1.0.0",
+  "description": "Kindle Kids Nursery React + Vite frontend",
+  "main": "index.jsx",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "framer-motion": "^12.23.12",
+    "react-router-dom": "^6.15.0"
+  },
+  "devDependencies": {
+    "vite": "^5.3.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "tailwindcss": "^4.3.0",
+    "autoprefixer": "^11.8.0",
+    "postcss": "^8.4.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
