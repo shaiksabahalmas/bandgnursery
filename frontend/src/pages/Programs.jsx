@@ -1,128 +1,159 @@
 import { motion } from "framer-motion";
-import programsImg from "../assets/hero-programs.webp"; // 👈 replace with your hero image
-import playgroupIcon from "../assets/playgroup.webp";   // temporary icons
+
+import programsImg from "../assets/hero-programs.webp";
+import playgroupIcon from "../assets/playgroup.webp";
 import nurseryIcon from "../assets/nursery.webp";
 import kindergartenIcon from "../assets/kindergarten.png";
 
 export default function Programs() {
+
   const programList = [
     {
       id: 1,
-      title: "🧸 Playgroup",
+      title: "Playgroup",
       age: "Ages 18 months – 2.5 years",
-      desc: "Sensory-rich experiences to build comfort, confidence, and basic motor skills.",
+      desc: "Sensory-rich experiences that nurture comfort, confidence, and early motor skills.",
       icon: playgroupIcon,
     },
     {
       id: 2,
-      title: "🎨 Nursery",
+      title: "Nursery",
       age: "Ages 2.5 – 3.5 years",
-      desc: "Interactive activities to promote curiosity, expression, and early learning habits.",
+      desc: "Creative activities that inspire curiosity, imagination, and early learning habits.",
       icon: nurseryIcon,
     },
     {
       id: 3,
-      title: "📚 Kindergarten",
+      title: "Kindergarten",
       age: "Ages 3.5 – 5 years",
-      desc: "Foundational literacy, math, social skills, and preparation for primary school.",
+      desc: "Foundational literacy, numeracy, and social skills to prepare children for primary school.",
       icon: kindergartenIcon,
     },
   ];
 
   return (
-    <div className="bg-neutral-background min-h-screen">
-      {/* Hero Section */}
-      <div className="relative max-w-7xl mx-auto py-20 px-6">
-        <div className="grid md:grid-cols-2 gap-10 items-stretch">
-          
-          {/* LEFT CONTAINER (Empty for now) */}
-<motion.div 
-  className="relative rounded-2xl p-10 md:p-12 border border-pink-200 shadow-lg 
-             bg-gradient-to-br from-pink-50 via-yellow-50 to-blue-50 
-             flex flex-col items-center justify-center text-center"
-  initial={{ x: -100, opacity: 0 }}
-  animate={{ x: 0, opacity: 1 }}
-  transition={{ duration: 0.8 }}
->
-  {/* Decorative doodle background */}
-  <div className="absolute inset-0 pointer-events-none opacity-10">
-    <div className="w-32 h-32 bg-pink-300 rounded-full blur-3xl absolute top-0 left-0"></div>
-    <div className="w-24 h-24 bg-yellow-300 rounded-full blur-2xl absolute bottom-10 right-10"></div>
-  </div>
+    <div className="bg-brand-soft min-h-screen">
 
-  <h1 className="text-4xl md:text-5xl font-extrabold text-primary-dark mb-4 relative z-10">
-    🌈 Our Programs
-  </h1>
-  <p className="text-lg md:text-xl text-neutral-text max-w-lg mx-auto relative z-10 leading-relaxed">
-    Engaging, age-appropriate learning paths for every stage — 
-    filled with <span className="text-pink-500 font-semibold">curiosity</span>, 
-    <span className="text-yellow-500 font-semibold"> creativity</span>, and 
-    <span className="text-blue-500 font-semibold"> confidence</span>.
-  </p>
-            <div className="flex space-x-4 mt-6">
-            <button className="bg-accent text-white px-6 py-3 rounded-xl hover:bg-accent-dark transition duration-300 font-semibold shadow-md">
-              Experience Us
-            </button>
-            <button className="bg-primary text-white px-6 py-3 rounded-xl hover:bg-primary-dark transition duration-300 font-semibold shadow-md">
-              Join Now
-            </button>
-          </div>
-</motion.div>
+      {/* HERO */}
+      <section className="relative bg-brand-hero text-white py-24 px-6">
 
-          {/* RIGHT CONTAINER (Image) */}
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+          {/* TEXT */}
           <motion.div
-            className="relative bg-neutral-background rounded-2xl shadow-lg overflow-hidden border border-gray-200 flex items-center justify-center"
-            initial={{ x: 100, opacity: 0 }}
+            initial={{ x: -80, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
+            className="space-y-6"
           >
-            <img 
-              src={programsImg} 
-              alt="Programs at Kindle Kids" 
-              className="w-full h-full object-cover rounded-2xl"
+
+            <h1 className="font-heading text-5xl leading-tight">
+              Our Programs
+            </h1>
+
+            <p className="font-body text-lg opacity-80">
+              Carefully designed learning paths that nurture curiosity,
+              creativity, and confidence at every stage of early childhood.
+            </p>
+
+            <div className="flex gap-4 pt-2">
+
+              <button className="bg-brand-accent px-6 py-3 rounded-full font-medium shadow-lg hover:scale-105 transition">
+                Experience Us
+              </button>
+
+              <button className="bg-brand-primary px-6 py-3 rounded-full font-medium shadow-lg hover:scale-105 transition">
+                Join Now
+              </button>
+
+            </div>
+
+          </motion.div>
+
+
+          {/* IMAGE */}
+          <motion.div
+            initial={{ x: 80, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="rounded-2xl overflow-hidden shadow-2xl"
+          >
+
+            <img
+              src={programsImg}
+              alt="Programs at Kindle Kids"
+              className="w-full h-[420px] object-cover"
             />
+
           </motion.div>
 
         </div>
-      </div>
-
-      {/* Main Programs Content */}
-      <section className="max-w-5xl mx-auto px-6 pb-20 text-center">
 
 
-        <h2 className="text-4xl md:text-5xl font-extrabold text-primary-dark mb-6">
+        {/* WAVE DIVIDER */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+          <svg viewBox="0 0 1440 320">
+            <path
+              fill="#F4EFE6"
+              d="M0,224L60,208C120,192,240,160,360,160C480,160,600,192,720,197.3C840,203,960,181,1080,176C1200,171,1320,181,1380,186.7L1440,192L1440,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
+
+      </section>
+
+
+
+      {/* PROGRAMS LIST */}
+      <section className="max-w-6xl mx-auto px-6 py-24 text-center">
+
+        <h2 className="font-heading text-4xl md:text-5xl text-brand-dark mb-6">
           Explore Our Learning Journey
         </h2>
-        <p className="text-lg text-neutral-text max-w3xl mx-auto mb-12">
-          We support children from their first steps through their early learning years with these carefully designed programs.
+
+        <p className="font-body text-brand-warm max-w-2xl mx-auto mb-16">
+          We support children from their first steps through their early
+          learning years with programs designed to inspire growth and joy.
         </p>
 
-        {/* Programs Grid */}
+
         <div className="grid md:grid-cols-3 gap-10">
+
           {programList.map((item) => (
+
             <motion.div
               key={item.id}
-              className="bg-white rounded-2xl shadow-md p-6 text-center border border-gray-200 hover:shadow-xl transition-shadow"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ y: -8 }}
+              transition={{ duration: 0.3 }}
+              className="bg-white p-8 rounded-2xl shadow-lg text-center"
             >
-              {/* Icon */}
-              <img 
-                src={item.icon} 
-                alt={item.title} 
-                className="w-20 h-20 mb-4 mx-auto"
+
+              <img
+                src={item.icon}
+                alt={item.title}
+                className="w-16 mx-auto mb-5"
               />
-              {/* Title */}
-              <h3 className="text-xl font-semibold text-neutral-heading mb-1">
+
+              <h3 className="font-heading text-xl text-brand-dark mb-2">
                 {item.title}
               </h3>
-              {/* Age */}
-              <p className="text-accent-dark font-medium mb-2">{item.age}</p>
-              {/* Description */}
-              <p className="text-neutral-text">{item.desc}</p>
+
+              <p className="text-brand-accent text-sm font-medium mb-3">
+                {item.age}
+              </p>
+
+              <p className="text-brand-warm text-sm leading-relaxed">
+                {item.desc}
+              </p>
+
             </motion.div>
+
           ))}
+
         </div>
+
       </section>
+
     </div>
   );
 }

@@ -1,54 +1,99 @@
 import { motion } from "framer-motion";
 import Hero from "../components/Hero";
 
-// Import your icons
 import icon1 from "../assets/icon1.webp";
 import icon2 from "../assets/icon2.webp";
 import icon3 from "../assets/icon3.webp";
 
 export default function Home() {
+
   const highlights = [
-    { id: 1, title: "Safe Environment", desc: "Our premises are fully secure and nurturing for every child.", icon: icon1 },
-    { id: 2, title: "Creative Curriculum", desc: "We use playful teaching techniques tailored for early learners.", icon: icon2 },
-    { id: 3, title: "Caring Staff", desc: "Our teachers are warm, trained, and passionate about child growth.", icon: icon3 },
+    {
+      id: 1,
+      title: "Safe Environment",
+      desc: "Our premises are secure, welcoming, and designed to nurture every child.",
+      icon: icon1,
+    },
+    {
+      id: 2,
+      title: "Creative Curriculum",
+      desc: "Play-based learning methods that inspire imagination and curiosity.",
+      icon: icon2,
+    },
+    {
+      id: 3,
+      title: "Caring Teachers",
+      desc: "Dedicated educators who support emotional and intellectual growth.",
+      icon: icon3,
+    },
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-neutral-background">
-      
-      {/* Hero Section */}
-      <section className="flex-1 flex items-center justify-center">
+    <div className="flex flex-col min-h-screen">
+
+      {/* HERO */}
+      <section className="relative bg-brand-hero text-white">
         <Hero />
+
+        {/* Wave Divider */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+          <svg viewBox="0 0 1440 320">
+            <path
+              fill="#F4EFE6"
+              d="M0,224L60,208C120,192,240,160,360,160C480,160,600,192,720,197.3C840,203,960,181,1080,176C1200,171,1320,181,1380,186.7L1440,192L1440,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
       </section>
 
-      {/* Highlights Section */}
-      <main className="flex-1 p-8 max-w-7xl mx-auto">
-        <h1 className="text-5xl font-bold text-primary-dark mb-12 text-center">
-          Welcome to Kindle Kids!
-        </h1>
-        <div className="grid md:grid-cols-3 gap-10">
-          {highlights.map((item) => (
-            <motion.div
-              key={item.id}
-              className="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition-shadow border border-secondary-light flex flex-col items-center text-center"
-              whileHover={{ scale: 1.03 }}
-            >
-              {/* Icon */}
-              <img 
-                src={item.icon} 
-                alt={item.title} 
-                className="w-20 h-20 mb-4"
-              />
-              {/* Title */}
-              <h2 className="text-2xl font-semibold mb-2 text-primary-dark">
-                {item.title}
-              </h2>
-              {/* Description */}
-              <p className="text-gray-600">{item.desc}</p>
-            </motion.div>
-          ))}
+
+      {/* HIGHLIGHTS */}
+      <section className="bg-brand-soft py-24 px-6">
+
+        <div className="max-w-7xl mx-auto text-center">
+
+          <h2 className="font-heading text-4xl md:text-5xl text-brand-dark mb-6">
+            A Place Where Young Minds Bloom
+          </h2>
+
+          <p className="font-body text-brand-warm max-w-2xl mx-auto mb-16">
+            At Kindle Kids we create joyful learning environments that encourage
+            curiosity, confidence, and creativity in every child.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-10">
+
+            {highlights.map((item) => (
+              <motion.div
+                key={item.id}
+                whileHover={{ y: -8 }}
+                transition={{ duration: 0.3 }}
+                className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-2xl transition-all"
+              >
+
+                <img
+                  src={item.icon}
+                  alt={item.title}
+                  className="w-16 h-16 mb-6"
+                />
+
+                <h3 className="font-heading text-xl text-brand-dark mb-3">
+                  {item.title}
+                </h3>
+
+                <p className="font-body text-sm text-brand-warm leading-relaxed">
+                  {item.desc}
+                </p>
+
+              </motion.div>
+            ))}
+
+          </div>
+
         </div>
-      </main>
+
+      </section>
+
     </div>
   );
 }

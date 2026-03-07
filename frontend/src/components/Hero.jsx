@@ -3,52 +3,64 @@ import heroImg from "../assets/hero-kids.webp";
 
 export default function Hero() {
   return (
-    <div className=" relative max-w-7xl mx-auto px-6 pt-12">
-      <div className="grid md:grid-cols-2 gap-10 items-stretch">
-        
-        {/* LEFT CONTAINER */}
-<motion.div 
-  className="bg-white rounded-2xl shadow-lg p-6 md:p-10 flex flex-col justify-center border border-gray-200"
-  initial={{ x: -100, opacity: 0 }}
-  animate={{ x: 0, opacity: 1 }}
-  transition={{ duration: 0.8 }}
->
-  <h1 className="text-4xl md:text-5xl font-extrabold text-primary-dark mb-4 relative z-10">
-    Learning is Fun at Kindle Kids!
-  </h1>
-  
-  <p className="text-lg md:text-xl text-neutral-text max-w-lg mx-auto relative z-10 leading-relaxed">
-    Engaging, age-appropriate learning paths for every stage — filled with curiosity, creativity, and confidence.
-  </p>
+    <section className="relative max-w-7xl mx-auto px-6 pt-24">
 
-  {/* Buttons */}
-  <div className="flex space-x-4 mt-6">
-    <button className="bg-accent text-white px-6 py-3 rounded-xl hover:bg-accent-dark transition duration-300 font-semibold shadow-md">
-      Explore Programs
-    </button>
-    <button className="bg-primary text-white px-6 py-3 rounded-xl hover:bg-primary-dark transition duration-300 font-semibold shadow-md">
-      Join Now
-    </button>
-  </div>
-</motion.div>
+      <div className="grid md:grid-cols-2 gap-12 items-center">
 
-
-        {/* RIGHT CONTAINER */}
+        {/* LEFT CONTENT */}
         <motion.div
-          className="relative bg-neutral-background rounded-2xl shadow-lg overflow-hidden border border-gray-200 flex items-center justify-center"
-          initial={{ x: 100, opacity: 0 }}
+          className="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-brand-soft flex flex-col justify-center"
+          initial={{ x: -80, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="absolute -top-10 -right-10 w-64 h-64 bg-gradient-to-br from-primary-light/20 to-secondary-light/20 rounded-full blur-3xl"></div>
-          <img 
-            src={heroImg} 
-            alt="Kids Learning" 
-            className="relative w-full h-full object-cover rounded-2xl"
+          
+          <h1 className="font-heading text-4xl md:text-5xl text-brand-dark mb-6 leading-tight">
+            Learning Blossoms <br /> at Kindle Kids
+          </h1>
+
+          <p className="font-body text-lg text-brand-warm leading-relaxed mb-8">
+            A joyful environment where curiosity grows, creativity flourishes,
+            and children build confidence through playful learning experiences.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap gap-4">
+
+            <button className="bg-brand-accent text-white px-7 py-3 rounded-full font-medium shadow-lg hover:scale-105 transition duration-300">
+              Explore Programs
+            </button>
+
+            <button className="bg-brand-primary text-white px-7 py-3 rounded-full font-medium shadow-lg hover:scale-105 transition duration-300">
+              Join Now
+            </button>
+
+          </div>
+
+        </motion.div>
+
+
+        {/* RIGHT IMAGE */}
+        <motion.div
+          className="relative rounded-2xl overflow-hidden shadow-2xl"
+          initial={{ x: 80, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+
+          {/* Decorative Glow */}
+          <div className="absolute -top-16 -right-16 w-72 h-72 bg-brand-primary/20 rounded-full blur-3xl"></div>
+
+          <img
+            src={heroImg}
+            alt="Children learning and playing"
+            className="relative w-full h-[420px] md:h-[520px] object-cover"
           />
+
         </motion.div>
 
       </div>
-    </div>
+
+    </section>
   );
 }

@@ -1,12 +1,17 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import contactBg from "../assets/contact-bg.jpg"; // funky background illustration
+
 import envelope from "../assets/mail.webp";
 import phone from "../assets/phone.webp";
 import location from "../assets/location.webp";
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -19,89 +24,143 @@ export default function Contact() {
   };
 
   return (
-    <section 
-      className="relative bg-neutral-background min-h-screen flex items-center py-20 px-6"
-      style={{ backgroundImage: `url(${contactBg})`, backgroundSize: "cover", backgroundPosition: "center" }}
-    >
-      <div className="absolute inset-0 bg-black/20 z-0 rounded-3xl"></div>
+    <div className="bg-brand-soft min-h-screen">
 
-      <div className="relative z-10 max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-10">
+      {/* HERO */}
+      <section className="relative bg-brand-hero text-white py-24 px-6 text-center">
 
-        {/* Left Contact Info */}
-        <motion.div 
-          className="bg-white/80 backdrop-blur-md rounded-3xl shadow-xl p-8 flex flex-col items-center text-center space-y-6"
-          initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="text-4xl font-extrabold text-primary-dark mb-4">Get in Touch!</h1>
-          <p className="text-neutral-text max-w-md">
-            We’d love to hear from you! Whether it’s a question, a suggestion, or just saying hi 👋
+        <div className="max-w-3xl mx-auto">
+
+          <h1 className="font-heading text-5xl mb-4">
+            Get in Touch
+          </h1>
+
+          <p className="font-body text-lg opacity-80">
+            We'd love to hear from you. Reach out with questions,
+            admissions inquiries, or simply to say hello.
           </p>
 
-          <div className="flex flex-col space-y-4 mt-6 w-full">
-            <div className="flex items-center space-x-4">
-              <img src={envelope} alt="email" className="w-10 h-10" />
-              <p className="text-neutral-heading font-medium">contact@kindlekids.com</p>
-            </div>
-            <div className="flex items-center space-x-4">
-              <img src={phone} alt="phone" className="w-10 h-10" />
-              <p className="text-neutral-heading font-medium">+91 98765 43210</p>
-            </div>
-            <div className="flex items-center space-x-4">
-              <img src={location} alt="location" className="w-10 h-10" />
-              <p className="text-neutral-heading font-medium">123 Rainbow Street, Fun City</p>
-            </div>
-          </div>
-        </motion.div>
+        </div>
 
-        {/* Right Contact Form */}
-        <motion.form
-          className="bg-white/80 backdrop-blur-md rounded-3xl shadow-xl p-8 flex flex-col space-y-6"
-          initial={{ x: 100, opacity: 0 }}
+        {/* wave divider */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+          <svg viewBox="0 0 1440 320">
+            <path
+              fill="#F4EFE6"
+              d="M0,224L60,208C120,192,240,160,360,160C480,160,600,192,720,197.3C840,203,960,181,1080,176C1200,171,1320,181,1380,186.7L1440,192L1440,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
+
+      </section>
+
+
+
+      {/* CONTACT SECTION */}
+      <section className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16">
+
+        {/* CONTACT INFO */}
+        <motion.div
+          initial={{ x: -80, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          onSubmit={handleSubmit}
+          className="space-y-8"
         >
-          <h2 className="text-3xl font-bold text-primary-dark text-center">Send Us a Message</h2>
+
+          <h2 className="font-heading text-4xl text-brand-dark">
+            Contact Information
+          </h2>
+
+          <p className="font-body text-brand-warm max-w-md">
+            We welcome visits, questions, and conversations about your
+            child’s early learning journey.
+          </p>
+
+
+          <div className="space-y-6">
+
+            <div className="flex items-center gap-4">
+              <img src={envelope} className="w-8" />
+              <p className="text-brand-dark">
+                contact@kindlekids.com
+              </p>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <img src={phone} className="w-8" />
+              <p className="text-brand-dark">
+                +91 98765 43210
+              </p>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <img src={location} className="w-8" />
+              <p className="text-brand-dark">
+                123 Rainbow Street, Chennai
+              </p>
+            </div>
+
+          </div>
+
+        </motion.div>
+
+
+
+        {/* CONTACT FORM */}
+        <motion.form
+          onSubmit={handleSubmit}
+          initial={{ x: 80, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="bg-white rounded-2xl shadow-xl p-10 space-y-6"
+        >
+
+          <h3 className="font-heading text-2xl text-brand-dark text-center">
+            Send Us a Message
+          </h3>
+
 
           <input
             type="text"
             name="name"
+            placeholder="Your Name"
             value={form.name}
             onChange={handleChange}
-            placeholder="Your Name"
-            className="rounded-xl p-4 border border-gray-300 focus:border-accent-dark focus:ring-2 focus:ring-accent-light outline-none transition-all"
             required
+            className="w-full border border-gray-200 p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-accent"
           />
+
           <input
             type="email"
             name="email"
+            placeholder="Your Email"
             value={form.email}
             onChange={handleChange}
-            placeholder="Your Email"
-            className="rounded-xl p-4 border border-gray-300 focus:border-accent-dark focus:ring-2 focus:ring-accent-light outline-none transition-all"
             required
+            className="w-full border border-gray-200 p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-accent"
           />
+
           <textarea
             name="message"
+            placeholder="Your Message"
             value={form.message}
             onChange={handleChange}
-            placeholder="Your Message"
-            className="rounded-xl p-4 border border-gray-300 focus:border-accent-dark focus:ring-2 focus:ring-accent-light outline-none transition-all h-32 resize-none"
             required
+            className="w-full border border-gray-200 p-4 rounded-xl h-32 resize-none focus:outline-none focus:ring-2 focus:ring-brand-accent"
           />
 
           <motion.button
-            type="submit"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-accent text-white font-bold py-4 rounded-xl shadow-lg hover:bg-accent-dark transition-all"
+            className="bg-brand-accent text-white py-4 rounded-full font-medium shadow-lg hover:opacity-90 transition"
           >
             Send Message
           </motion.button>
+
         </motion.form>
-      </div>
-    </section>
+
+      </section>
+
+    </div>
   );
 }
