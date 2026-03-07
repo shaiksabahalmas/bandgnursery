@@ -29,13 +29,13 @@ return ( <div className="bg-brand-soft min-h-screen">
         </h1>
 
         <p className="font-body text-lg opacity-80">
-          Kindle Kids was created with a simple belief — childhood should
+          Bloom & Grow was created with a simple belief — childhood should
           be filled with curiosity, creativity, and joy.
         </p>
 
         <img
           src={leftImg}
-          alt="Kindle Kids journey illustration"
+          alt="Bloom & Grow journey illustration"
           className="w-full max-w-md"
         />
 
@@ -61,7 +61,7 @@ return ( <div className="bg-brand-soft min-h-screen">
 
     {/* HERO WAVE */}
     <svg
-      className="absolute bottom-0 left-0 w-full"
+      className="absolute -bottom-px left-0 w-full"
       viewBox="0 0 1440 320"
       preserveAspectRatio="none"
     >
@@ -79,7 +79,7 @@ return ( <div className="bg-brand-soft min-h-screen">
   <section className="max-w-5xl mx-auto px-6 py-24 text-center">
 
     <h2 className="font-heading text-4xl md:text-5xl text-brand-dark mb-12">
-      About Kindle Kids
+      About Bloom & Grow Nursery
     </h2>
 
     <div className="space-y-10 font-body text-lg text-brand-warm leading-relaxed">

@@ -1,4 +1,6 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -13,10 +15,25 @@ import Sitemap from "./pages/Sitemap";
 import ConsentChoices from "./pages/ConsentChoices";
 
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
+
 function App() {
   return (
     <Router>
+
+      <ScrollToTop />
+
       <Navbar />
+
       <div className="min-h-screen">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -31,8 +48,9 @@ function App() {
           <Route path="/consent" element={<ConsentChoices />} />
         </Routes>
       </div>
-      
+
       <Footer />
+
     </Router>
   );
 }

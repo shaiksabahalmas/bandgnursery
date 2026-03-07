@@ -107,7 +107,7 @@ return ( <footer className="bg-brand-dark text-white pt-0 pb-8">
       <div className="w-full h-32 rounded-xl overflow-hidden shadow-md">
         <iframe
           title="Map"
-          src="https://maps.google.com/maps?q=chennai&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2130.010257222152!2d55.52127836226839!3d25.38437083333489!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef5f7b2afaa49c5%3A0xce6930c9f1f00fcd!2z2KrYtdmI2YrYsSDYp9mE2YXZhtiq2KzYp9iq!5e0!3m2!1sen!2sin!4v1772906093268!5m2!1sen!2sin"
           className="w-full h-full border-0"
           loading="lazy"
         />

@@ -44,7 +44,7 @@ return ( <div className="bg-brand-soft min-h-screen">
 
     {/* Hero bottom wave */}
     <svg
-      className="absolute bottom-0 left-0 w-full"
+      className="absolute -bottom-px left-0 w-full"
       viewBox="0 0 1440 320"
       preserveAspectRatio="none"
     >
@@ -86,7 +86,7 @@ return ( <div className="bg-brand-soft min-h-screen">
 
         <div className="flex items-center gap-4">
           <img src={phone} alt="phone" className="w-8"/>
-          <p className="text-brand-dark">+91 98765 43210</p>
+          <p className="text-brand-dark">+971 065759566</p>
         </div>
 
         <div className="flex items-center gap-4">

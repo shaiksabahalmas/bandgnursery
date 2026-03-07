@@ -5,11 +5,11 @@ export default function Hero() {
   return (
     <section className="relative max-w-7xl mx-auto px-6 pt-24">
 
-      <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="grid md:grid-cols-2 gap-12 items-stretch">
 
         {/* LEFT CONTENT */}
         <motion.div
-          className="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-brand-soft flex flex-col justify-center"
+          className="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-brand-soft flex flex-col justify-center h-full"
           initial={{ x: -80, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -42,7 +42,7 @@ export default function Hero() {
 
         {/* RIGHT IMAGE */}
         <motion.div
-          className="relative rounded-2xl overflow-hidden shadow-2xl"
+          className="relative rounded-3xl overflow-hidden shadow-2xl h-full"
           initial={{ x: 80, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -54,7 +54,7 @@ export default function Hero() {
           <img
             src={heroImg}
             alt="Children learning and playing"
-            className="relative w-full h-[420px] md:h-[520px] object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
           />
 
         </motion.div>

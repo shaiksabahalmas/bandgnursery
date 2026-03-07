@@ -37,7 +37,7 @@ return ( <div className="bg-brand-soft min-h-screen">
 
     {/* HERO WAVE */}
     <svg
-      className="absolute bottom-0 left-0 w-full"
+      className="absolute -bottom-px left-0 w-full"
       viewBox="0 0 1440 320"
       preserveAspectRatio="none"
     >
