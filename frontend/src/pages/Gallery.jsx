@@ -20,7 +20,7 @@ export default function Gallery() {
     <div className="bg-brand-soft min-h-screen">
 
       {/* HERO */}
-      <section className="relative bg-brand-hero text-white py-24 px-6 text-center">
+      <section className="relative bg-brand-hero text-white pt-24 pb-32 px-6 text-center"> 
 
         <div className="max-w-4xl mx-auto">
 
@@ -36,7 +36,7 @@ export default function Gallery() {
         </div>
 
         {/* Wave divider */}
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+        <div className="absolute -bottom-1 left-0 w-full overflow-hidden leading-none">
           <svg viewBox="0 0 1440 320">
             <path
               fill="#F4EFE6"
