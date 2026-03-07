@@ -38,14 +38,14 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="Kindle Kids" className="w-10 h-10" />
+          <img src={logo} alt="Bloom & Grow" className="w-10 h-10" />
 
           <span
             className={`font-heading text-xl transition ${
               scrolled ? "text-brand-dark" : "text-white"
             }`}
           >
-            Kindle Kids
+            Bloom & Grow
           </span>
         </Link>
 

@@ -10,7 +10,7 @@ export default function Terms() {
         </h1>
 
         <p className="font-body text-lg opacity-80 max-w-2xl mx-auto">
-          Please read these terms carefully before using the Kindle Kids Nursery website.
+          Please read these terms carefully before using the Bloom & Grow Nursery website.
         </p>
 
         {/* Wave */}
@@ -31,7 +31,7 @@ export default function Terms() {
         <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-10 font-body text-brand-warm leading-relaxed space-y-4">
 
           <p>
-            Welcome to Kindle Kids Nursery website. By accessing or using our
+            Welcome to Bloom & Grow Nursery website. By accessing or using our
             website, you agree to comply with these Terms of Use.
           </p>
 

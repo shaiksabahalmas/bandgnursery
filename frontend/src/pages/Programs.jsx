@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import WaveDivider from "../components/WaveDivider";
 
 import programsImg from "../assets/hero-programs.webp";
 import playgroupIcon from "../assets/playgroup.webp";
@@ -13,30 +12,30 @@ const programList = [
 id: 1,
 title: "Playgroup",
 age: "Ages 18 months – 2.5 years",
-desc: "Sensory-rich experiences that nurture comfort, confidence, and early motor skills.",
+desc: "Sensory-rich experiences nurturing confidence and early motor skills.",
 icon: playgroupIcon,
 },
 {
 id: 2,
 title: "Nursery",
 age: "Ages 2.5 – 3.5 years",
-desc: "Creative activities that inspire curiosity, imagination, and early learning habits.",
+desc: "Creative activities that inspire curiosity and imagination.",
 icon: nurseryIcon,
 },
 {
 id: 3,
 title: "Kindergarten",
 age: "Ages 3.5 – 5 years",
-desc: "Foundational literacy, numeracy, and social skills to prepare children for primary school.",
+desc: "Foundational literacy and social skills for school readiness.",
 icon: kindergartenIcon,
 },
 ];
 
 return ( <div className="bg-brand-soft min-h-screen">
 
-```
+
   {/* HERO */}
-  <section className="relative bg-brand-hero text-white pt-24 pb-32 px-6">
+  <section className="relative bg-brand-hero text-white pt-24 pb-32 px-6 overflow-hidden">
 
     <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
@@ -47,28 +46,16 @@ return ( <div className="bg-brand-soft min-h-screen">
         className="space-y-6"
       >
 
-        <h1 className="font-heading text-5xl leading-tight">
+        <h1 className="font-heading text-5xl">
           Our Programs
         </h1>
 
         <p className="font-body text-lg opacity-80">
-          Carefully designed learning paths that nurture curiosity,
-          creativity, and confidence at every stage of early childhood.
+          Learning paths designed to nurture curiosity and creativity.
         </p>
 
-        <div className="flex gap-4 pt-2">
-
-          <button className="bg-brand-accent px-6 py-3 rounded-full font-medium shadow-lg hover:scale-105 transition">
-            Experience Us
-          </button>
-
-          <button className="bg-brand-primary px-6 py-3 rounded-full font-medium shadow-lg hover:scale-105 transition">
-            Join Now
-          </button>
-
-        </div>
-
       </motion.div>
+
 
       <motion.div
         initial={{ x: 80, opacity: 0 }}
@@ -79,7 +66,7 @@ return ( <div className="bg-brand-soft min-h-screen">
 
         <img
           src={programsImg}
-          alt="Programs at Kindle Kids"
+          alt="Programs"
           className="w-full h-[420px] object-cover"
         />
 
@@ -87,22 +74,23 @@ return ( <div className="bg-brand-soft min-h-screen">
 
     </div>
 
-    <WaveDivider color="#F4EFE6" />
+    {/* Hero bottom wave */}
+    <svg
+      className="absolute bottom-0 left-0 w-full"
+      viewBox="0 0 1440 320"
+      preserveAspectRatio="none"
+    >
+      <path
+        fill="#F4EFE6"
+        d="M0,160L60,176C120,192,240,224,360,229.3C480,235,600,213,720,208C840,203,960,213,1080,218.7C1200,224,1320,224,1380,224L1440,224L1440,320L0,320Z"
+      />
+    </svg>
 
   </section>
 
 
   {/* PROGRAMS LIST */}
   <section className="max-w-6xl mx-auto px-6 py-24 text-center">
-
-    <h2 className="font-heading text-4xl md:text-5xl text-brand-dark mb-6">
-      Explore Our Learning Journey
-    </h2>
-
-    <p className="font-body text-brand-warm max-w-2xl mx-auto mb-16">
-      We support children from their first steps through their early
-      learning years with programs designed to inspire growth and joy.
-    </p>
 
     <div className="grid md:grid-cols-3 gap-10">
 
@@ -112,7 +100,7 @@ return ( <div className="bg-brand-soft min-h-screen">
           key={item.id}
           whileHover={{ y: -8 }}
           transition={{ duration: 0.3 }}
-          className="bg-white p-8 rounded-2xl shadow-lg text-center"
+          className="bg-white p-8 rounded-2xl shadow-lg"
         >
 
           <img
@@ -125,11 +113,11 @@ return ( <div className="bg-brand-soft min-h-screen">
             {item.title}
           </h3>
 
-          <p className="text-brand-accent text-sm font-medium mb-3">
+          <p className="text-brand-accent text-sm mb-3">
             {item.age}
           </p>
 
-          <p className="text-brand-warm text-sm leading-relaxed">
+          <p className="text-brand-warm text-sm">
             {item.desc}
           </p>
 

@@ -12,6 +12,7 @@ import CookiePolicy from "./pages/CookiePolicy";
 import Sitemap from "./pages/Sitemap";
 import ConsentChoices from "./pages/ConsentChoices";
 
+
 function App() {
   return (
     <Router>
@@ -30,6 +31,7 @@ function App() {
           <Route path="/consent" element={<ConsentChoices />} />
         </Routes>
       </div>
+      
       <Footer />
     </Router>
   );

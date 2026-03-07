@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import WaveDivider from "../components/WaveDivider";
 
 import aboutImg from "../assets/hero-about.webp";
 import play from "../assets/facility-play.webp";
@@ -11,9 +10,9 @@ import leftImg from "../assets/leftImg.svg";
 export default function About() {
 return ( <div className="bg-brand-soft min-h-screen">
 
-```
+
   {/* HERO / JOURNEY */}
-  <section className="relative bg-brand-hero text-white pt-24 pb-32 px-6">
+  <section className="relative bg-brand-hero text-white pt-24 pb-32 px-6 overflow-hidden">
 
     <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
@@ -36,7 +35,7 @@ return ( <div className="bg-brand-soft min-h-screen">
 
         <img
           src={leftImg}
-          alt="Kindle Kids Journey"
+          alt="Kindle Kids journey illustration"
           className="w-full max-w-md"
         />
 
@@ -52,7 +51,7 @@ return ( <div className="bg-brand-soft min-h-screen">
 
         <img
           src={aboutImg}
-          alt="About Kindle Kids"
+          alt="Children learning at nursery"
           className="w-full h-[420px] object-cover"
         />
 
@@ -60,8 +59,17 @@ return ( <div className="bg-brand-soft min-h-screen">
 
     </div>
 
-    {/* Reusable Wave Divider */}
-    <WaveDivider color="#F4EFE6" />
+    {/* HERO WAVE */}
+    <svg
+      className="absolute bottom-0 left-0 w-full"
+      viewBox="0 0 1440 320"
+      preserveAspectRatio="none"
+    >
+      <path
+        fill="#F4EFE6"
+        d="M0,160L60,176C120,192,240,224,360,229.3C480,235,600,213,720,208C840,203,960,213,1080,218.7C1200,224,1320,224,1380,224L1440,224L1440,320L0,320Z"
+      />
+    </svg>
 
   </section>
 
@@ -144,9 +152,9 @@ return ( <div className="bg-brand-soft min-h-screen">
         <motion.div
           whileHover={{ y: -8 }}
           transition={{ duration: 0.3 }}
-          className="bg-brand-soft p-8 rounded-2xl shadow-lg text-center"
+          className="bg-brand-soft p-8 rounded-2xl border border-black/5 shadow-sm hover:shadow-xl text-center"
         >
-          <img src={play} className="w-16 mx-auto mb-4" />
+          <img src={play} alt="Play area" className="w-16 mx-auto mb-4" />
           <h3 className="font-heading text-xl text-brand-dark mb-2">
             Play Areas
           </h3>
@@ -160,9 +168,9 @@ return ( <div className="bg-brand-soft min-h-screen">
         <motion.div
           whileHover={{ y: -8 }}
           transition={{ duration: 0.3 }}
-          className="bg-brand-soft p-8 rounded-2xl shadow-lg text-center"
+          className="bg-brand-soft p-8 rounded-2xl border border-black/5 shadow-sm hover:shadow-xl text-center"
         >
-          <img src={teacher} className="w-16 mx-auto mb-4" />
+          <img src={teacher} alt="Teachers" className="w-16 mx-auto mb-4" />
           <h3 className="font-heading text-xl text-brand-dark mb-2">
             Qualified Staff
           </h3>
@@ -176,9 +184,9 @@ return ( <div className="bg-brand-soft min-h-screen">
         <motion.div
           whileHover={{ y: -8 }}
           transition={{ duration: 0.3 }}
-          className="bg-brand-soft p-8 rounded-2xl shadow-lg text-center"
+          className="bg-brand-soft p-8 rounded-2xl border border-black/5 shadow-sm hover:shadow-xl text-center"
         >
-          <img src={art} className="w-16 mx-auto mb-4" />
+          <img src={art} alt="Creative zones" className="w-16 mx-auto mb-4" />
           <h3 className="font-heading text-xl text-brand-dark mb-2">
             Creative Zones
           </h3>
@@ -192,9 +200,9 @@ return ( <div className="bg-brand-soft min-h-screen">
         <motion.div
           whileHover={{ y: -8 }}
           transition={{ duration: 0.3 }}
-          className="bg-brand-soft p-8 rounded-2xl shadow-lg text-center"
+          className="bg-brand-soft p-8 rounded-2xl border border-black/5 shadow-sm hover:shadow-xl text-center"
         >
-          <img src={food} className="w-16 mx-auto mb-4" />
+          <img src={food} alt="Nutrition and care" className="w-16 mx-auto mb-4" />
           <h3 className="font-heading text-xl text-brand-dark mb-2">
             Nutrition & Care
           </h3>
@@ -206,9 +214,11 @@ return ( <div className="bg-brand-soft min-h-screen">
       </div>
 
     </div>
+
   </section>
 
 </div>
+
 
 );
 }

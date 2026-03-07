@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import WaveDivider from "../components/WaveDivider";
 
 import envelope from "../assets/mail.webp";
 import phone from "../assets/phone.webp";
@@ -26,9 +25,9 @@ setForm({ name: "", email: "", message: "" });
 
 return ( <div className="bg-brand-soft min-h-screen">
 
-```
+
   {/* HERO */}
-  <section className="relative bg-brand-hero text-white pt-24 pb-32 px-6 text-center">
+  <section className="relative bg-brand-hero text-white pt-24 pb-32 px-6 text-center overflow-hidden">
 
     <div className="max-w-3xl mx-auto">
 
@@ -43,7 +42,17 @@ return ( <div className="bg-brand-soft min-h-screen">
 
     </div>
 
-    <WaveDivider color="#F4EFE6" />
+    {/* Hero bottom wave */}
+    <svg
+      className="absolute bottom-0 left-0 w-full"
+      viewBox="0 0 1440 320"
+      preserveAspectRatio="none"
+    >
+      <path
+        fill="#F4EFE6"
+        d="M0,160L60,176C120,192,240,224,360,229.3C480,235,600,213,720,208C840,203,960,213,1080,218.7C1200,224,1320,224,1380,224L1440,224L1440,320L0,320Z"
+      />
+    </svg>
 
   </section>
 
@@ -71,17 +80,17 @@ return ( <div className="bg-brand-soft min-h-screen">
       <div className="space-y-6">
 
         <div className="flex items-center gap-4">
-          <img src={envelope} className="w-8" />
-          <p className="text-brand-dark">contact@kindlekids.com</p>
+          <img src={envelope} alt="email" className="w-8"/>
+          <p className="text-brand-dark">contact@bandgnursery.ae</p>
         </div>
 
         <div className="flex items-center gap-4">
-          <img src={phone} className="w-8" />
+          <img src={phone} alt="phone" className="w-8"/>
           <p className="text-brand-dark">+91 98765 43210</p>
         </div>
 
         <div className="flex items-center gap-4">
-          <img src={location} className="w-8" />
+          <img src={location} alt="location" className="w-8"/>
           <p className="text-brand-dark">123 Rainbow Street, Chennai</p>
         </div>
 

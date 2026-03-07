@@ -9,7 +9,7 @@ export default function Privacy() {
         </h1>
 
         <p className="font-body text-lg opacity-80 max-w-2xl mx-auto">
-          Learn how Kindle Kids Nursery protects your personal information.
+          Learn how Bloom & Grow Nursery protects your personal information.
         </p>
 
         <div className="absolute bottom-0 left-0 w-full overflow-hidden">
@@ -27,7 +27,7 @@ export default function Privacy() {
         <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-10 font-body text-brand-warm leading-relaxed space-y-4">
 
           <p>
-            At Kindle Kids Nursery we respect your privacy and protect your
+            At Bloom & Grow Nursery we respect your privacy and protect your
             personal data.
           </p>
 

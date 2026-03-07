@@ -16,7 +16,7 @@ export default function Hero() {
         >
           
           <h1 className="font-heading text-4xl md:text-5xl text-brand-dark mb-6 leading-tight">
-            Learning Blossoms <br /> at Kindle Kids
+            Learning Blossoms <br /> at Bloom & Grow Nursery
           </h1>
 
           <p className="font-body text-lg text-brand-warm leading-relaxed mb-8">
