@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "../assets/logo.webp";
+import logonew from "../assets/logonew.png";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,17 +37,26 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6">
 
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="Bloom & Grow" className="w-10 h-10" />
+<Link to="/" className="flex items-center gap-3">
 
-          <span
-            className={`font-heading text-xl transition ${
-              scrolled ? "text-brand-dark" : "text-white"
-            }`}
-          >
-            Bloom & Grow
-          </span>
-        </Link>
+  {/* Logo Badge */}
+  <div className="bg-white rounded-full p-1 shadow-md">
+    <img
+      src={logonew}
+      alt="Bloom & Grow"
+      className="w-20 h-20 object-contain"
+    />
+  </div>
+
+  <span
+    className={`font-heading text-3xl transition ${
+      scrolled ? "text-brand-dark" : "text-white"
+    }`}
+  >
+    Bloom & Grow Nursery
+  </span>
+
+</Link>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-8">
